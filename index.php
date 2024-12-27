@@ -15,14 +15,14 @@ $nombre = $_POST['nombre'] ?? '';
 $apellido = $_POST['apellido'] ?? '';
 $edad = $_POST['edad'] ?? '';
 $password = $_POST['password'] ?? '';
-$colors = $_REQUEST['color'] ?? [];
+// $colors = $_REQUEST['color'] ?? [];
 
 include 'validator.php';
 ?>
 
 <body>
     <h1 class="body__h1">Formulario</h1>
-    <form class="body__form" action="/index.php" method="post">
+    <form class="body__form" action="createDb.php" method="post">
 
         <label class="form__label">
             introduce tu nombre
@@ -43,7 +43,7 @@ include 'validator.php';
 
         <label class="form__label">
             introduce tu contraseña
-            <input type="password" name="password" <?php echo $password ?> class="label__input">
+            <input type="password" name="password" value="<?php echo $password ?>" class="label__input">
             </input>
         </label>
 
